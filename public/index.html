@@ -5,6 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>stuffed animal shopping cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="nav-container">
+        <div class="menu-mobile">
+          <img src="../src/assests/icons/bars-solid.svg" alt="" />
+        </div>
+        <div class="logo">
+          <img src="../src/assests/icons/logo.svg" alt="logo" />
+        </div>
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">¿Quienes somos?</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Contacto</a>
+          </li>
+        </ul>
+
+        <div class="shopping-cart__container">
+          <ul>
+            <li class="shopping-cart__submenu">
+              <img
+                src="../src/assests/icons/cart-shopping-solid.svg"
+                alt="shopping cart"
+                id="cart"
+              />
+              <div id="container__table" class="shopping-cart__area">
+                <table id="list-cart" class="shopping-cart__table">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <a href="#" id="empty-cart" class="shopping-cart__btn"
+                  >Vaciar Carrito</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <script src="../src/index.js"></script>
+  </body>
 </html>
