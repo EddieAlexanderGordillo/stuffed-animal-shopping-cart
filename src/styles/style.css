@@ -7,12 +7,12 @@
     --hoverDesktopMenu: #FFD3AD;
     --bacgoundMobileMenu: #EFFFD4;
     --hoverMobileMenu: #CBD9B4;
-    --lightPeach: #FFE1C7;
-    --primary: #FFDAB9;
     --button: #B7A1FF;
     --button-active: #8779B3;
+    --backgroundHero: rgb(255, 225, 199, .5);
+    --primary: #ffdab9;
     --bacground: #D4FFD6;
-    --optional: #EDADFF;
+    --optional: hsl(287, 100%, 84%);
     --backgroundShoppingCart: #EFFFD4;
 }
 
@@ -145,12 +145,100 @@ th {
     width: 90%;
     font-size: 1.6rem;
     font-weight: 600;
-    margin: 30px auto;
-    padding: 5px;
     text-decoration: none;
     text-align: center;
+    margin: 30px auto;
+    padding: 5px;
     color: var(--mediumGray);
     border: 1px solid var(--mediumGray);
+    border-radius: 8px;
+}
+
+/* Banner */
+
+.banner {
+    width: 100%;
+    height: 40vh;
+    background-color: #F5F5F5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .1s ease-out;
+    background-image: url('../assests/images/banner-3.jpg');
+    animation: banner 20s infinite linear;
+}
+
+.banner-content {
+    width: 100%;
+    height: 100%;
+    color: var(--almostWhite);
+    background-color: var(--backgroundHero);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.banner-content a {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 9px 20px;
+    text-decoration: none;
+    color: var(--almostWhite);
+    background-color: var(--button);
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+}
+
+.banner-content a:hover {
+    background-color: var(--button-active);
+    color: var(--almostWhite);
+}
+
+@keyframes banner {
+    0% {
+        background-image: url('../assests/images/banner-3.jpg');
+    }
+
+    25% {
+        background-image: url('../assests/images/banner-3.jpg');
+    }
+
+
+    26% {
+        background-image: url('../assests/images/banner-2.png');
+    }
+
+    50% {
+        background-image: url('../assests/images/banner-2.png');
+    }
+
+
+    51% {
+        background-image: url('../assests/images/banner-1.jpg');
+    }
+
+    75% {
+        background-image: url('../assests/images/banner-1.jpg');
+    }
+
+
+    76% {
+        background-image: url('../assests/images/banner-4.png');
+    }
+
+    100% {
+        background-image: url('../assests/images/banner-4.png');
+    }
+
 }
 
 @media(min-width:620px) {
