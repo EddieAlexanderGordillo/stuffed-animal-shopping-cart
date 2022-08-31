@@ -241,7 +241,102 @@ th {
 
 }
 
-@media(min-width:620px) {
+/* main */
+.product-card__container {
+    width: 90%;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+
+}
+
+.product-card__container>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid var(--mediumGray);
+    border-radius: 8px;
+    /* background-color: var(--almostWhite); */
+    background-color: #f8ecde;
+
+}
+
+.product-card__img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-card__info {
+    max-width: 220px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+
+}
+
+.info__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--mediumGray);
+}
+
+.info__description {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--mediumGray);
+}
+
+.info__price {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.product-card__button {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.button-add-card {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 9px 20px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--almostWhite);
+    background-color: var(--button);
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.button-add-card:hover {
+    background-color: var(--button-active)
+}
+
+.button-add-card img {
+    margin-left: 8px;
+    width: 15px;
+    filter: invert(100%) sepia(55%) saturate(770%) hue-rotate(195deg) brightness(113%) contrast(103%);
+
+}
+
+@media(min-width:480px) {
+    .product-card__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width:680px) {
     .nav-container {
         align-items: center;
 
@@ -281,5 +376,17 @@ th {
             flex-direction: column;
             overflow-x: auto; */
         max-width: unset;
+    }
+
+    .product-card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+@media(min-width:1020px) {
+    .product-card__container {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
