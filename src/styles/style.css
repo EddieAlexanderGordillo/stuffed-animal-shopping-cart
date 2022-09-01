@@ -10,10 +10,11 @@
     --button: #B7A1FF;
     --button-active: #8779B3;
     --backgroundHero: rgb(255, 225, 199, .5);
-    --primary: #ffdab9;
-    --bacground: #D4FFD6;
-    --optional: hsl(287, 100%, 84%);
     --backgroundShoppingCart: #EFFFD4;
+    --primary: #ffdab9;
+    --bacgroundFooter: #D9D8C3;
+    --bacgroundCard: #f8ecde;
+    --optional: hsl(287, 100%, 84%);
 }
 
 /* generales */
@@ -258,9 +259,7 @@ th {
     justify-content: space-around;
     border: 2px solid var(--mediumGray);
     border-radius: 8px;
-    /* background-color: var(--almostWhite); */
-    background-color: #f8ecde;
-
+    background-color: var(--bacgroundCard);
 }
 
 .product-card__img {
@@ -330,6 +329,73 @@ th {
 
 }
 
+/* footer */
+
+.footer {
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--bacgroundFooter);
+
+}
+
+.footer__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 20px 10px 20px;
+}
+
+.footer__contact,
+.footer__follow,
+.footer__logo,
+.footer__author {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--almostBlack);
+    margin-bottom: 15px;
+}
+
+.footer__contact h3,
+.footer__follow h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.footer__whatsapp {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.footer__contact p {
+    margin-bottom: 5px;
+}
+
+.footer__follow div {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.icon-social-media img {
+    width: 25px;
+}
+
+.footer__logo {
+    margin: 5px;
+}
+
+.footer__author {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 @media(min-width:480px) {
     .product-card__container {
         grid-template-columns: repeat(2, 1fr);
@@ -367,19 +433,16 @@ th {
     }
 
     .shopping-cart__area {
-        /* position: absolute;
-            background-color: var(--backgroundShoppingCart);
-            min-height: 200px;
-            top: 50px;
-            right: 0px;
-            display: flex;
-            flex-direction: column;
-            overflow-x: auto; */
         max-width: unset;
     }
 
     .product-card__container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer__container {
+        flex-direction: row;
+        justify-content: space-around;
     }
 
 
