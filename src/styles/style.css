@@ -4,12 +4,12 @@
     --almostBlack: hsl(0, 0%, 8%);
     --backdrop: hsl(0deg 0% 0% / 40%);
     --backgroundHeader: linear-gradient(0deg, rgba(255, 218, 186, 1) 70%, rgba(250, 250, 250, 1) 100%);
-    --hoverDesktopMenu: #FFD3AD;
+    --hoverDesktopMenu: #f7c497;
     --bacgoundMobileMenu: #EFFFD4;
     --hoverMobileMenu: #CBD9B4;
     --button: #B7A1FF;
     --button-active: #8779B3;
-    --backgroundHero: rgb(255, 225, 199, .5);
+    --backgroundHero: rgb(255, 225, 199, .6);
     --backgroundShoppingCart: #EFFFD4;
     --primary: #ffdab9;
     --bacgroundFooter: #D9D8C3;
@@ -46,6 +46,16 @@ html {
     cursor: pointer;
 }
 
+.backdropMobile {
+    height: 100%;
+    padding-top: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    background-color: var(--backdrop);
+
+}
+
 /* menu hamburguesa */
 .menu-mobile {
     width: 30%;
@@ -66,6 +76,7 @@ html {
     left: 0px;
     background-color: var(--bacgoundMobileMenu);
     margin-left: -100%;
+    transition: all 0.5s;
 
 }
 
@@ -109,7 +120,7 @@ html {
     max-width: 370px;
     min-height: 200px;
     position: absolute;
-    top: 50px;
+    top: 49px;
     right: 0px;
     display: flex;
     flex-direction: column;
@@ -139,7 +150,17 @@ th {
     height: 25px;
     font-size: 1.8rem;
     font-weight: 500;
-    padding: 2px 10px
+    padding: 2px 10px 3px 10px;
+}
+
+td {
+    text-align: center;
+}
+
+.delete-product {
+    width: 20px;
+    filter: invert(13%) sepia(72%) saturate(6331%) hue-rotate(358deg) brightness(109%) contrast(115%);
+
 }
 
 .shopping-cart__btn {
@@ -155,11 +176,16 @@ th {
     border-radius: 8px;
 }
 
+.shopping-cart__btn:hover {
+    color: var(--almostBlack);
+    border: 1px solid var(--almostBlack);
+}
+
 /* Banner */
 
 .banner {
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background-color: #F5F5F5;
     background-size: cover;
     background-repeat: no-repeat;
@@ -408,6 +434,11 @@ th {
 
     }
 
+    .backdropMobile {
+        height: unset;
+        background-color: unset;
+    }
+
     .menu-mobile {
         display: none;
     }
@@ -434,6 +465,7 @@ th {
 
     .shopping-cart__area {
         max-width: unset;
+        top: 39px;
     }
 
     .product-card__container {
